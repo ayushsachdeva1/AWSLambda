@@ -38,4 +38,3 @@ Information sources:
 3. https://aws.amazon.com/lambda/faqs/#:~:text=AWS%20Lambda%20natively%20supports%20Java,%2C%20C%23%2C%20Go%20and%20PowerShell.
 4. https://www.thesunflowerlab.com/blog/benefits-aws-lambda-serverless-computing/#:~:text=AWS%20Lambda%20is%20offered%20as,thousands%20of%20requests%20per%20second.
 5. https://www.nakivo.com/blog/aws-lambda-vs-amazon-ec2-which-one-to-choose/
-6. 
