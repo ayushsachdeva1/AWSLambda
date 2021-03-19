@@ -17,7 +17,7 @@ Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure,
 
 Note that Lambda is classified as a function-as-a-service (FaaS) and EC2 is classified as an infrastructure-as-a-service (IaaS). 
 
-Hence, with Lambda,you don't have to worry about operational and administrative activities that you would perform on an EC2 instance. You can simply run your application/function without being concerned about the underlying infrastructure. Furthermore, Lambda provides easy scaling and high availability to your code without additional effort on your part. Lambda is also better to use if your EC2 instance has a lot of idle time.
+Hence, with Lambda, you don't have to worry about operational and administrative activities that you would perform on an EC2 instance. You can simply run your application/function without being concerned about the underlying infrastructure. Furthermore, Lambda provides easy scaling and high availability to your code without additional effort on your part. Lambda is also better to use if your EC2 instance has a lot of idle time.
 
 On the other hand, if your applications are high-performance, long-running, or are applications must not have a delay at the start time, you should be using EC2. Also, EC2 should be used if you need the option to customize the operating system or network and security settings, or the underlying architecture.
 
