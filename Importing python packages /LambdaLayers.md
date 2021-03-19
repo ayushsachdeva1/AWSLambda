@@ -1,6 +1,6 @@
 # Lambda Layers
 
-![image](![image](https://user-images.githubusercontent.com/55956808/111727794-96d53280-8839-11eb-9a6e-02b2d58bc9a7.png)
+![image](https://user-images.githubusercontent.com/55956808/111727794-96d53280-8839-11eb-9a6e-02b2d58bc9a7.png)
 
 Lambda Layers are a new type of artifact that can contain arbitrary code and data, and may be referenced by zero, one, or more functions at the same time. Lambda functions in a serverless application typically share common dependencies such as SDKs, frameworks, and now runtimes. With layers, you can centrally manage common components across multiple functions enabling better code reuse. You can configure your Lambda function to pull in additional code and content in the form of these layers. A layer is a .zip file archive that contains libraries, a custom runtime, or other dependencies. 
 
