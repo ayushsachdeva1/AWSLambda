@@ -13,7 +13,7 @@ Step by step guide to adding Lambda Layers:
 1. Create your lambda function.
 2. Locate the function overview on the function dashboard and click on "Layers".
 <img width="863" alt="Screen Shot 2021-03-18 at 10 56 07 PM" src="https://user-images.githubusercontent.com/55956808/111729511-3e079900-883d-11eb-830a-00cd5f9acd1e.png">
-3. Click on "Add a Layer". 
+3. Click on "Add a Layer".\
 4. Choose "Specify an ARN", enter the ARN and click on "Add".
 <img width="839" alt="Screen Shot 2021-03-18 at 10 58 39 PM" src="https://user-images.githubusercontent.com/55956808/111729632-7c04bd00-883d-11eb-8a91-33c3491a51af.png">
 
