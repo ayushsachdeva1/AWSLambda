@@ -16,7 +16,7 @@
         data = s3_object.get()
         df = pd.read_csv(data['Body'], sep=';')
 
-        //Preprocessing of dataframe df
+        ###Preprocessing of dataframe df
 
         output_key = "output_file_name.csv"
         obj = s3_resource.Object(bucket, directory + output_key)
