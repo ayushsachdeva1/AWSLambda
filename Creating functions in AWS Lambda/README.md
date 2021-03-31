@@ -1,44 +1,29 @@
 # Python Functions on AWS Lambda
 
-Quick Steps:
+Quick Steps to create Lambda function:
 1. Click on top right corner button "Create Function".
-![image](Uploading Screen Shot 2021-03-30 at 9.03.15 PM.png…)
-2. 
+2. Select "Author from scratch" (or "Use a Blueprint" if there is a blueprint available).
+3. Choose name and select runtime as "Python 3.7" and NOT "Python 3.8" (This is because many layers are only available for Python 3.7).
+4. Choose appropriate execution role.
+5. Ignore advanced settings and click on the "Create Function" button on the bottom right. 
+<img width="1311" alt="Screen Shot 2021-03-30 at 9 04 28 PM" src="https://user-images.githubusercontent.com/55956808/113081117-b0616d00-919d-11eb-8e55-f7c7db10070a.png">
 
+Using AWS Lambda Environment for Code Execution
+1. Note that there is only function in the code by default i.e. the lambda handler. Do not change the signature of this function but feel free to create other functions.
+2. Treat the lambda handler function as main() function in C++/Java. It is responsible for the running all the code. The AWS Lambda processor only runs the lambda_handler so you want to put all your executables in there.
+3. Input and output in the lambda_handler is done through JSON or through system output which is, as usual, done through print statements. 
+4. Add all the executable code to the lambda_handler and click on "Deploy".
+<img width="1278" alt="Screen Shot 2021-03-30 at 9 12 48 PM" src="https://user-images.githubusercontent.com/55956808/113081139-bce5c580-919d-11eb-935c-a2f17a4cddde.png">
+5. In order to test/run the code, click on "Test".
+6. If you don't take any input, then just delete all the JSON content in the testing code as shown. If input is required, edit JSON accordingly. 
+7. Click "Test" and see output in execution pane. 
+<img width="818" alt="Screen Shot 2021-03-30 at 9 14 47 PM" src="https://user-images.githubusercontent.com/55956808/113081153-c66f2d80-919d-11eb-878e-5be37c3f7910.png">
 
-AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers, creating workload-aware cluster scaling logic, maintaining event integrations, or managing runtimes. With Lambda, you can run code for virtually any type of application or backend service - all with zero administration. Just upload your code as a ZIP file or container image, and Lambda automatically and precisely allocates compute execution power and runs your code based on the incoming request or event, for any scale of traffic. 
-
-## Advantages of AWS Lambda
-* Quick and efficient deployment of resources
-* No idle server time 
-* Charges per Millisecond i.e. you only pay for as much time you use the server for
-* Low operational complexity
-* Easy to scale functions
-* Rich ecosystem of AWS services that can be used as triggers for function
-
-## When to use Lambda over EC2?
-Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It provides you with complete control of your computing resources and lets you run on Amazon’s proven computing environment. 
-
-Note that Lambda is classified as a function-as-a-service (FaaS) and EC2 is classified as an infrastructure-as-a-service (IaaS). 
-
-Hence, with Lambda, you don't have to worry about operational and administrative activities that you would perform on an EC2 instance. You can simply run your application/function without being concerned about the underlying infrastructure. Furthermore, Lambda provides easy scaling and high availability to your code without additional effort on your part. Lambda is also better to use if your EC2 instance has a lot of idle time.
-
-On the other hand, if your applications are high-performance, long-running, or are applications must not have a delay at the start time, you should be using EC2. Also, EC2 should be used if you need the option to customize the operating system or network and security settings, or the underlying architecture.
-
-## Available Languages: 
-* Java
-* Go
-* PowerShell
-* Node.js
-* C#
-* Python
-* Ruby code
-
-For the purposes of this repository, we will be focusing on using Python with AWS Lambda in order to facilitate data pre-processing and machine learning modeling.
+Trouble-shooting
+1. Run-time issues: If run-time is too short, change it using the "Configuration" pane. 
+2. Import issues: Various python modules are not available in AWS Lambda. Check out page on Lambda Layers for ways to work around it.
+3. Saving issues: Lambda functions are automatically saved. Make sure you are in the same region as when you created the function, as us-west and us-east might show different functions.
 
 Information sources:
-1. https://aws.amazon.com/lambda/
-2. https://docs.aws.amazon.com/whitepapers/latest/security-overview-aws-lambda/benefits-of-lambda.html
-3. https://aws.amazon.com/lambda/faqs/#:~:text=AWS%20Lambda%20natively%20supports%20Java,%2C%20C%23%2C%20Go%20and%20PowerShell.
-4. https://www.thesunflowerlab.com/blog/benefits-aws-lambda-serverless-computing/#:~:text=AWS%20Lambda%20is%20offered%20as,thousands%20of%20requests%20per%20second.
-5. https://www.nakivo.com/blog/aws-lambda-vs-amazon-ec2-which-one-to-choose/
+1. https://docs.aws.amazon.com/lambda/latest/dg/lambda-python.html
+2. https://docs.aws.amazon.com/lambda/latest/dg/getting-started-create-function.html
