@@ -5,20 +5,21 @@ Storing files in and getting files from S3 is very similar in Lambda as with oth
 
 We will be using Boto3 library for interacting with S3. Boto3 is a software development kit (SDK) provided by AWS to facilitate the interaction with S3 APIs and other services such as Elastic Compute Cloud (EC2). Using Boto3, we can list all the S3 buckets, create an EC2 instances, or control any number of AWS resources.
 
-'''
-def upload_file(file_name, bucket):
-    """
-    Function to upload a file to an S3 bucket
-    """
-    object_name = file_name
-    s3_client = boto3.client('s3')
-    response = s3_client.upload_file(file_name, bucket, object_name)
+Use the following commands for uploading and downloading files from S3.
 
-    return response
-'''
+    def upload_file(file_name, bucket):
+        object_name = file_name
+        s3_client = boto3.client('s3')
+        response = s3_client.upload_file(file_name, bucket, object_name)
+        return response 
+    
+    def download_file(file_name, bucket):
+        s3 = boto3.resource('s3')
+        output = f"downloads/{file_name}"
+        s3.Bucket(bucket).download_file(file_name, output)
+        return output
 
 
 Information sources:
-1. https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html
-2. https://aws.amazon.com/blogs/compute/working-with-aws-lambda-and-lambda-layers-in-aws-sam/
-3. https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html#configuration-layers-create
+1. https://stackabuse.com/file-management-with-aws-s3-python-and-flask/
+2. https://docs.aws.amazon.com/lambda/latest/dg/with-s3.html
