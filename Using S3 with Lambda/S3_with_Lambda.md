@@ -7,6 +7,8 @@ We will be using Boto3 library for interacting with S3. Boto3 is a software deve
 
 Use the following commands for uploading and downloading files from S3.
 
+    import boto3
+    
     def upload_file(file_name, bucket):
         object_name = file_name
         s3_client = boto3.client('s3')
