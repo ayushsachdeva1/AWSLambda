@@ -14,8 +14,8 @@ Using AWS Lambda Environment for Code Execution
 3. Input and output in the lambda_handler is done through JSON or through system output which is, as usual, done through print statements. 
 4. Add all the executable code to the lambda_handler and click on "Deploy".
 <img width="1278" alt="Screen Shot 2021-03-30 at 9 12 48 PM" src="https://user-images.githubusercontent.com/55956808/113081139-bce5c580-919d-11eb-935c-a2f17a4cddde.png">
-5. In order to test/run the code, click on "Test".
-6. If you don't take any input, then just delete all the JSON content in the testing code as shown. If input is required, edit JSON accordingly. 
+5. In order to test/run the code, click on "Test". <br /> 
+6. If you don't take any input, then just delete all the JSON content in the testing code as shown. If input is required, edit JSON accordingly. <br /> 
 7. Click "Test" and see output in execution pane. 
 <img width="818" alt="Screen Shot 2021-03-30 at 9 14 47 PM" src="https://user-images.githubusercontent.com/55956808/113081153-c66f2d80-919d-11eb-878e-5be37c3f7910.png">
 
